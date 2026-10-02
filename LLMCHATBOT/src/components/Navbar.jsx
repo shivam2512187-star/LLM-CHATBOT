@@ -1,4 +1,4 @@
-import React from 'react'
+ import React from 'react'
  import { Moon } from 'lucide-react';
  import { GitCompareArrows } from 'lucide-react';
  import { Triangle } from 'lucide-react';
@@ -18,11 +18,11 @@ const Navbar = () => {
 
           <div>
             <h1 className="text-2xl font-bold text-cyan-400">
-              Trinity
+             Gemini Flash
             </h1>
 
             <p className="text-xs   text-slate-400">
-              MULTI-MODEL CONSOLE
+           AI-RESPONSE-GENERATOR
             </p>
           
           </div>
@@ -30,7 +30,7 @@ const Navbar = () => {
         
 
         </div>
-
+{/* 
         <div className="flex gap-4">
           <button className="w-11 h-11 rounded-full border   flex  items-center justify-center  border-slate-900">
           <Moon />
@@ -39,7 +39,7 @@ const Navbar = () => {
           <button className="w-11 h-11 rounded-full border flex  items-center justify-center   border-slate-700">
           <GitCompareArrows />
           </button>
-        </div>
+        </div> */}
 
        
 

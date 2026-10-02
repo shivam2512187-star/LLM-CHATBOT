@@ -1,38 +1,48 @@
-import React from 'react'
-import { SendHorizontal } from 'lucide-react';
+ import React from "react";
+import { Send } from "lucide-react";
 
-const Footer = () => {
+
+const Footer = ( {prompt ,setprompt,handleGenerate}) => {
   return (
-    <footer className="    bg-slate-800 p-4 sm:p-6 lg:px-16 lg:py-5 ">
+    <footer className="border-t border-slate-800 px-4 sm:px-6 lg:px-16 py-5 sm:py-6">
 
-  
-  <div className="mb-4 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between ">
+     
+      <div className="mb-4">
+
+        <button className="px-4 sm:px-5 py-2 rounded-full border border-slate-600 text-xs sm:text-sm hover:bg-slate-800">
+          Gemini (Google)
+        </button>
+
+      </div>
+
 
     
+      <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
 
-    <p className="text-xs font-medium  text-slate-400">
-      LIVE COMPARISON
-    </p>
+        <input
+         value={prompt}
+        onChange={(e) => setprompt(e.target.value)}
+         
+        
+          type="text"
+          placeholder="Enter your prompt..."
+          className="w-full h-14 sm:h-16 rounded-xl sm:rounded-2xl border border-slate-700 bg-slate-950 px-4 sm:px-5 text-sm sm:text-base outline-none placeholder:text-slate-500 focus:border-blue-400"
+        />
 
-  </div>
+        <button  onClick= {handleGenerate}
+           
+     className="w-full sm:w-auto sm:px-8 h-14 sm:h-16 rounded-xl sm:rounded-2xl border border-slate-600 bg-[#0b162d] flex items-center justify-center gap-2 font-semibold text-sm hover:bg-slate-800">
 
+          <Send size={18} />
 
-  
-  <div className="flex  gap-3 lg:flex-row ">
+          GENERATE
 
-    <input
-      placeholder="Enter your prompt and see three viewpoints..."
-      className="min-h-20 flex-1 rounded-2xl border border-slate-700 bg-slate-950 p-4 text-sm text-white outline-none placeholder:text-slate-500 "
-   />
+        </button>
 
-    <button className="rounded-2xl border border-slate-700 bg-slate-950 px-8 py-4 font-semibold  text-white hover:bg-slate-800 flex items-center justify-between gap-4">
-    <span> <SendHorizontal /></span> GENERATE
-    </button>
+      </div>
 
-  </div>
+    </footer>
+  );
+};
 
-</footer>
-  )
-}
-
-export default Footer
+export default Footer;
