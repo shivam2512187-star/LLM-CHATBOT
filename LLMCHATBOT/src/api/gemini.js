@@ -17,6 +17,8 @@ export async function askGemini(prompt) {
           },
         ],
       },
+
+      
       {
         headers: {
           "Content-Type": "application/json",

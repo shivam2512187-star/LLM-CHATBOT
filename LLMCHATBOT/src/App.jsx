@@ -61,20 +61,22 @@ setHistory((prev) => [newChat, ...prev]);
   <Navbar />
 
   <div className="flex">
-    <Aside
-      history={history}
-      onSelectChat={(chat) => {
-        setprompt(chat.prompt);
-        setResponse(chat.response);
-      }}
-    />
+    <div className="hidden md:block">
+      <Aside
+        history={history}
+        onSelectChat={(chat) => {
+          setprompt(chat.prompt);
+          setResponse(chat.response);
+        }}
+      />
+    </div>
 
-    <main className="flex-1 min-w-0 p-10 pb-40">
+    <main className="flex-1 min-w-0 p-3 sm:p-5 lg:p-10 pb-40">
       <Body response={response} />
     </main>
   </div>
 
-  <div className="fixed bottom-0 left-64 right-0 z-50 bg-slate-950">
+  <div className="fixed bottom-0 left-0 md:left-64 right-0 z-50 bg-slate-950">
     <Footer
       prompt={prompt}
       setprompt={setprompt}
