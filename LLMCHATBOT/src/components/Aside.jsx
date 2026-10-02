@@ -5,13 +5,13 @@ const Aside = ({ history, onSelectChat }) => {
   return (
     <aside className="w-64 h-screen shrink-0 sticky top-0 border-r border-slate-900 text-white flex flex-col p-5">
 
-      {/* History Heading */}
+     
       <h2 className="text-xl font-bold mb-4 flex items-center gap-2 shrink-0">
         <RotateCcwClock />
         History
       </h2>
 
-      {/* Search Box */}
+     
       <div className="border border-slate-700 rounded-full px-4 py-3 flex items-center gap-2 text-slate-500 mb-5 shrink-0">
         <Search size={18} />
 
@@ -22,7 +22,7 @@ const Aside = ({ history, onSelectChat }) => {
         />
       </div>
 
-      {/* Scrollable History List */}
+      
       <div className="flex-1 min-h-0 overflow-y-auto flex flex-col gap-3 pr-2">
         {Array.isArray(history) && history.length > 0 ? (
           history.map((chat) => (
